@@ -1,16 +1,19 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './components/Header'
-import Contact from './components/Contact';
+import Header from './components/layout/Header'
+import Contacts from './components/contacts/Contacts';
+
+import {Provider} from './context'
 function App() {
   return (
-    <div className=''>
+    <Provider>
+      <div className=''>
       <Header branding='Contact Manager'/>
       <div className='container mt-3'>
-      <Contact name='Hamza' email='hamza@gmail.com' phone='03009795655'/>
-      <Contact name='Arslan' email='arslan@gmail.com' phone='03458754896'/>
+      <Contacts />
       </div>
     </div>
+    </Provider>
   );
 }
 
